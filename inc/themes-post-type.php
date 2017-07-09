@@ -7,7 +7,7 @@ function lean_themes_post_type() {
 		'singular_name'         => _x( '主题', 'Post Type Singular Name', 'lean' ),
 		'menu_name'             => __( '主题', 'lean' ),
 		'name_admin_bar'        => __( '主题', 'lean' ),
-		'archives'              => __( 'Item Archives', 'lean' ),
+		'archives'              => __( '主题', 'lean' ),
 		'attributes'            => __( 'Item Attributes', 'lean' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'lean' ),
 		'all_items'             => __( '所有主题', 'lean' ),
