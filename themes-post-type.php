@@ -17,4 +17,4 @@ define("PLUGIN_DIR", plugin_dir_path( __FILE__ ) );
 // Register Custom Post Type
 
 require_once( PLUGIN_DIR . 'inc/themes-post-type.php' );
-//require_once( PLUGIN_DIR . 'classes/class.cptui_debug_info.php' );
+//require_once( PLUGIN_DIR . 'inc/taxonomies.php' );
