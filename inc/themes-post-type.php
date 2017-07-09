@@ -1,31 +1,18 @@
 <?php
-/*
-Plugin Name: Product Post Type
-Plugin URI:  https://github.com/sieon/theme-post-type
-Description: creat product post type.
-Version:     0.0.1
-Author:      sieon
-Author URI:  https://qingzhuti.com
-License:     GPL2
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: lean
-Domain Path: /languages
-*/
-
 // Register Custom Post Type
-function lean_products_post_type() {
+function lean_themes_post_type() {
 
 	$labels = array(
-		'name'                  => _x( '产品', 'Post Type General Name', 'lean' ),
-		'singular_name'         => _x( '产品', 'Post Type Singular Name', 'lean' ),
-		'menu_name'             => __( '产品', 'lean' ),
-		'name_admin_bar'        => __( '产品', 'lean' ),
+		'name'                  => _x( '主题', 'Post Type General Name', 'lean' ),
+		'singular_name'         => _x( '主题', 'Post Type Singular Name', 'lean' ),
+		'menu_name'             => __( '主题', 'lean' ),
+		'name_admin_bar'        => __( '主题', 'lean' ),
 		'archives'              => __( 'Item Archives', 'lean' ),
 		'attributes'            => __( 'Item Attributes', 'lean' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'lean' ),
-		'all_items'             => __( '所有产品', 'lean' ),
+		'all_items'             => __( '所有主题', 'lean' ),
 		'add_new_item'          => __( 'Add New Item', 'lean' ),
-		'add_new'               => __( '添加产品', 'lean' ),
+		'add_new'               => __( '添加主题', 'lean' ),
 		'new_item'              => __( 'New Item', 'lean' ),
 		'edit_item'             => __( 'Edit Item', 'lean' ),
 		'update_item'           => __( 'Update Item', 'lean' ),
@@ -45,8 +32,8 @@ function lean_products_post_type() {
 		'filter_items_list'     => __( 'Filter items list', 'lean' ),
 	);
 	$args = array(
-		'label'                 => __( '产品', 'lean' ),
-		'description'           => __( '产品描述。', 'lean' ),
+		'label'                 => __( '主题', 'lean' ),
+		'description'           => __( '主题描述。', 'lean' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
@@ -64,6 +51,6 @@ function lean_products_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 	);
-	register_post_type( 'products', $args );
+	register_post_type( 'themes', $args );
 }
-add_action( 'init', 'lean_products_post_type', 0 );
+add_action( 'init', 'lean_themes_post_type', 0 );
