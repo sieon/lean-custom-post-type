@@ -1,25 +1,25 @@
 <?php
 // Register Custom Post Type
-function lean_themes_post_type() {
+function lean_theme_post_type() {
 
 	$labels = array(
 		'name'                  => _x( '主题', 'Post Type General Name', 'lean' ),
 		'singular_name'         => _x( '主题', 'Post Type Singular Name', 'lean' ),
 		'menu_name'             => __( '主题', 'lean' ),
 		'name_admin_bar'        => __( '主题', 'lean' ),
-		'archives'              => __( 'Item Archives', 'lean' ),
+		'archives'              => __( '主题', 'lean' ),
 		'attributes'            => __( 'Item Attributes', 'lean' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'lean' ),
 		'all_items'             => __( '所有主题', 'lean' ),
 		'add_new_item'          => __( 'Add New Item', 'lean' ),
 		'add_new'               => __( '添加主题', 'lean' ),
-		'new_item'              => __( 'New Item', 'lean' ),
-		'edit_item'             => __( 'Edit Item', 'lean' ),
-		'update_item'           => __( 'Update Item', 'lean' ),
+		'new_item'              => __( '新建', 'lean' ),
+		'edit_item'             => __( '编辑', 'lean' ),
+		'update_item'           => __( '更新', 'lean' ),
 		'view_item'             => __( '查看此主题', 'lean' ),
 		'view_items'            => __( '查看主题', 'lean' ),
-		'search_items'          => __( 'Search Item', 'lean' ),
-		'not_found'             => __( 'Not found', 'lean' ),
+		'search_items'          => __( '搜索', 'lean' ),
+		'not_found'             => __( '没有找到', 'lean' ),
 		'not_found_in_trash'    => __( 'Not found in Trash', 'lean' ),
 		'featured_image'        => __( '特色图像', 'lean' ),
 		'set_featured_image'    => __( '设置特色图像', 'lean' ),
@@ -33,7 +33,7 @@ function lean_themes_post_type() {
 	);
 	$args = array(
 		'label'                 => __( '主题', 'lean' ),
-		'description'           => __( '主题描述。', 'lean' ),
+		'description'           => __( '展示开发的主题。', 'lean' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
@@ -51,6 +51,6 @@ function lean_themes_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 	);
-	register_post_type( 'themes', $args );
+	register_post_type( 'theme', $args );
 }
-add_action( 'init', 'lean_themes_post_type', 0 );
+add_action( 'init', 'lean_theme_post_type', 0 );
