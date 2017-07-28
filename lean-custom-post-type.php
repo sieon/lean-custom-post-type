@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Theme Post Type
-Plugin URI:  https://github.com/sieon/themes-post-type
-Description: creat themes post type.
+Plugin Name: Lean Custom Post Type
+Plugin URI:  https://github.com/sieon/lean-custom-post-type
+Description: creat custom post type.
 Version:     0.0.2
 Author:      sieon
 Author URI:  https://qingzhuti.com
@@ -17,4 +17,5 @@ define("PLUGIN_DIR", plugin_dir_path( __FILE__ ) );
 // Register Custom Post Type
 
 require_once( PLUGIN_DIR . 'inc/theme-post-type.php' );
+require_once( PLUGIN_DIR . 'inc/slide-post-type.php' );
 //require_once( PLUGIN_DIR . 'inc/taxonomies.php' );

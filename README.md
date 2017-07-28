@@ -1,2 +1,2 @@
-# products-post-type
+# custom-post-type
 自用。
